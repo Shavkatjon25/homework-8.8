@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 
 export default function Home() {
-const [dat, setDat]=useState([])
+const [dat, setDat]=useState([{id:0, name:'x'}])
 const [val, setVal]=useState('')
 
   useEffect(()=>{
@@ -29,7 +29,7 @@ const [val, setVal]=useState('')
     setVal('')
     
   }
-  async function DELETE(d) {
+  async function DELETE(d:any) {
     const res = await fetch('http://localhost:3000/api', {
       method: 'DELETE',
       body: JSON.stringify(d),
