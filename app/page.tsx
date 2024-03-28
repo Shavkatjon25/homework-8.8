@@ -11,7 +11,7 @@ const [val, setVal]=useState('')
     Dta()
   },[])
    async function Dta(){    
-    const mal=await fetch('http://localhost:3000/api')
+    const mal=await fetch('https://main--effortless-sprite-3015df.netlify.app/api')
     const maljs=await mal.json();
     console.log(maljs);
     setDat(maljs)
@@ -19,7 +19,7 @@ const [val, setVal]=useState('')
   }
 
    async function POST() {
-    const res = await fetch('http://localhost:3000/api', {
+    const res = await fetch('https://main--effortless-sprite-3015df.netlify.app/api', {
       method: 'POST',
       body: JSON.stringify(val),
     })
@@ -30,7 +30,7 @@ const [val, setVal]=useState('')
     
   }
   async function DELETE(d:any) {
-    const res = await fetch('http://localhost:3000/api', {
+    const res = await fetch('https://main--effortless-sprite-3015df.netlify.app/api', {
       method: 'DELETE',
       body: JSON.stringify(d),
     })
